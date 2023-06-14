@@ -16,7 +16,25 @@ for i in range(0, len(text_list), 4):
     value_list.append(text_list[i : i + 4])
 #создаем словарь
 dictionary = dict(zip(key_list, value_list))
+print(dictionary)
+myValue = "печь"
 #создаем список русских слов
 russian_list = []
 for i in range(len(value_list)):
     russian_list.append((value_list[i][0]))
+print(russian_list)
+#Получение ключа по значению
+value_input = 'склонять'
+if value_input in russian_list:
+    for key, value in dictionary.items():
+        if value_input in value:
+            print(key)
+else:
+    print('Я не знаю')
+
+
+
+
+# for key, value in dictionary.items():
+#     if value == myValue:
+#         print(key)
